@@ -1,0 +1,29 @@
+// Prisma schema for the CCA Platform API.
+//
+// Phase 1 scope: prove the Prisma -> PostgreSQL plumbing works end to end
+// (client generation, migrations, connection). The real multi-tenant
+// domain model (Organization, School, Provider, Student, Activity,
+// Enrollment, Session, Attendance, Performance, ...) is designed and
+// added in Phase 2. Intentionally not modeled here to avoid locking in
+// schema decisions before that design pass.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+   provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+/// Temporary model that only exists to verify the Prisma <-> PostgreSQL
+/// pipeline (migrate, generate, connect) during Phase 1. It is removed in
+/// Phase 2 once real domain models replace it.
+model HealthCheck {
+  id        String   @id @default(uuid())
+  status    String   @default("ok")
+  checkedAt DateTime @default(now())
+
+  @@map("health_checks")
+}

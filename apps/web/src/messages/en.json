@@ -1,0 +1,26 @@
+{
+  "app": {
+    "name": "CCA Platform",
+    "tagline": "Co-curricular activity management for schools"
+  },
+  "common": {
+    "loading": "Loading…",
+    "error": "Something went wrong",
+    "retry": "Try again",
+    "language": "Language"
+  },
+  "errors": {
+    "INTERNAL_SERVER_ERROR": "An unexpected error occurred. Please try again.",
+    "VALIDATION_FAILED": "Some fields need your attention.",
+    "NOT_FOUND": "We couldn't find what you're looking for.",
+    "FORBIDDEN": "You don't have permission to do that.",
+    "UNAUTHORIZED": "Please sign in to continue.",
+    "CONFLICT": "This action conflicts with existing data.",
+    "RATE_LIMITED": "Too many requests. Please slow down.",
+    "AUTH_INVALID_CREDENTIALS": "Incorrect email or password.",
+    "AUTH_TOKEN_EXPIRED": "Your session has expired. Please sign in again.",
+    "AUTH_TOKEN_INVALID": "Your session is invalid. Please sign in again.",
+    "TENANT_NOT_FOUND": "This organization or school could not be found.",
+    "CROSS_TENANT_ACCESS_DENIED": "You don't have access to this record."
+  }
+}
